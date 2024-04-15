@@ -10,7 +10,7 @@ public class Minmax {
         double max = array[0];
         double min = array[0];
         double avg = 0;
-            for (int i = 0; i <SIZE; i++) {
+        for (int i = 0; i < SIZE; i++) {
             if (max < array[i])
                 max = array[i];
             if (min > array[i])
