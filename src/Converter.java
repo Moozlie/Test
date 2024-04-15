@@ -1,33 +1,35 @@
 import java.util.Scanner;
 public class Converter {
-        public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
-
-            System.out.print("Введите градусы по Цельсию: ");
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Введите градусы Цельсия: ");
             double celsius = scanner.nextDouble();
 
-            System.out.println("Выберите тип конвертации:");
-            System.out.println("1. Конвертировать в Фаренгейты");
-            System.out.println("2. Конвертировать в Кельвины");
-
-                int choice = scanner.nextInt();
+            System.out.println("Выберите тип конвертации:\n1. Цельсии в Фаренгейты\n2. Цельсии в Кельвины");
+            int choice = scanner.nextInt();
 
             switch (choice) {
                 case 1:
-                System.out.println(celsius + " градусов по Цельсию равно " + convertToFahrenheit(celsius) + " градусов по Фаренгейту");
-                break;
+                    double fahrenheit = convertCelsiusToFahrenheit(celsius);
+                    System.out.println(celsius + " градусов Цельсия равны " + fahrenheit + " градусам по Фаренгейту.");
+                    break;
                 case 2:
-                System.out.println(celsius + " градусов по Цельсию равно " + convertToKelvin(celsius) + " градусов по Кельвину");
-                break;
+                    double kelvin = convertCelsiusToKelvin(celsius);
+                    System.out.println(celsius + " градусов Цельсия равны " + kelvin + " Кельвинам.");
+                    break;
                 default:
-                    System.out.println("Некорректный выбор");
+                    System.out.println("Неверный выбор.");
             }
-            scanner.close();
+        } catch (Exception e) {
+            System.out.println("Произошла ошибка: " + e.getMessage());
         }
-        public static double convertToFahrenheit(double celsius) {
-            return celsius * 9 / 5 + 32;
-        }
-            public static double convertToKelvin(double celsius) {
-                return celsius + 273.15;
-            }
-        }
+    }
+
+    public static double convertCelsiusToFahrenheit(double celsius) {
+        return celsius * 9 / 5 + 32;
+    }
+
+    public static double convertCelsiusToKelvin(double celsius) {
+        return celsius + 273.15;
+    }
+}

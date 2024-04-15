@@ -16,7 +16,7 @@ public class Angle {
     public static void main(String[] args) {
         Angle angel = new Angle();
         int hours = 11;
-        int minutes = 55;
+        int minutes = 54;
         double result = angel.calculateAngle(hours, minutes);
         System.out.println("Угол между часовой и минутной стрелками в " + hours + " часов " + minutes + " минут: " + result + " градусов");
     }
