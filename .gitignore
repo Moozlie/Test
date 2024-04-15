@@ -14,7 +14,7 @@ out/
 bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
-.idea
+echo '.idea' >> .gitignore
 
 ### NetBeans ###
 /nbproject/private/
