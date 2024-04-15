@@ -2,10 +2,10 @@ import java.util.Scanner;
 public class Angle {
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
-            System.out.print("Введите часы (от 1 до 12):");
+            System.out.print("Введите час (от 1 до 12):");
             int hours = scanner.nextInt();
 
-            System.out.println("Введите минуты (от 0 до 59):");
+            System.out.println("Введите минуту (от 0 до 59):");
             int minutes = scanner.nextInt();
 
             double angle = calculateClockAngle(hours, minutes);
