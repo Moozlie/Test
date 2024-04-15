@@ -1,8 +1,6 @@
 ### IntelliJ IDEA ###
 # IntellijIdea files
-*.iml
-.idea
-out
+git checkout master -- .gitignore
 !**/src/main/**/out/
 !**/src/test/**/out/
 
