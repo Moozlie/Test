@@ -1,32 +1,25 @@
 public class Minmax {
     public static void main(String[] args) {
-        int size = 10;
-        int[] array = new int[size];
-        for (int i = 0; i < size; i++) {
-            array[i] = (int) (Math.random() * 100);
-        }
-        int max = array[0];
-        int min = array[0];
-        double sum = 0;
 
-        for (int num : array) {
-            if (num > max) {
-                max = num;
-            }
-            if (num < min) {
-                min = num;
-            }
-            sum += num;
+        int n = 1;
+        double[] array = new double[n];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = Math.random();
         }
 
-        double avg = sum / size;
-
-        System.out.println("Массив случайных чисел:");
-        for (int num : array) {
-            System.out.print(num + " ");
+        double max = array[0];
+        double min = array[0];
+        double avg = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (max < array[i])
+                max = array[i];
+            if (min > array[i])
+                min = array[i];
+            avg += array[i] / array.length;
         }
-        System.out.println("\n   Максимальное значение:" + max);
-        System.out.println("   Минимальное значение:" + min);
-        System.out.println("   Среднее значение:" + avg);
+
+        System.out.println("Максимальное значение = " + max);
+        System.out.println("Минимальное значение  = " + min);
+        System.out.println("Среднее значение = " + avg);
     }
 }
