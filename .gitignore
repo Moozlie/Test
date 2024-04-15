@@ -1,10 +1,6 @@
 ### IntelliJ IDEA ###
 .idea/
 *.iml
-git rm --cached .idea/
-git rm --cached <имя_файла>.iml
-git add .
-git commit -m "Удалены файлы и папки IntelliJ IDEA из Git зависимости"
 
 
 out/

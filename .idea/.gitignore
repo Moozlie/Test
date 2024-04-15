@@ -3,10 +3,6 @@
 /workspace.xml
 .idea/
 *.iml
-git rm --cached .idea/
-git rm --cached <имя_файла>.iml
-git add .
-git commit -m "Удалены файлы и папки IntelliJ IDEA из Git зависимости"
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files
